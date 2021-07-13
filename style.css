@@ -21,7 +21,14 @@ body{
 .main_container{
     display:flex;
     width:80%;
+    border:1px black solid;
     flex-direction: row;
+    justify-content: space-around;
+}
+.hint{
+    border:1px black solid;
+    width:50%;
+    justify-self:normal;
 }
 .keyboard{
     width:100%;
@@ -42,6 +49,7 @@ body{
 .btn:focus{
     background-color:red;
 }
+
 @media only screen and (min-width:250px) and (max-width: 600px){
     .start_btn{
         height:5%;
