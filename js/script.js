@@ -6,11 +6,7 @@ const guess = [{word:"sedia",hint:"si usa per poggiare le chiappe"},
                 {word:"cracco",hint:"tu sei un culo"},
                 {word:"cannavacciuolo",hint:"e disc sin!"},
             ];
-window.onload = () =>{
-    var letter = "";
-    key = document.querySelectorAll(".btn");
-    key.forEach(element => addEvent(element));
-};
+
 var startGame = () =>{
     var button = document.querySelector(".start_btn");
     button.style.display="none";
@@ -25,15 +21,17 @@ var startGame = () =>{
     search(guess[rndomIdx].word,"c");
     rndomIdx = Math.round(Math.random() * guess.length-1);
 };
-addEvent=(key)=>{
-    var val = "";
-    key.addEventListener("click",()=>{
-        val = key.value;
-        //console.log("hai cliccato il tasto "+val);
-        return val;
-    });
-}
 var search = (word,letter) =>{
     if (word.includes(letter) === true) console.log("la lettera "+letter+" è presente in "+word);
 }
-
+var extractNum = () =>{
+    var letter = "";
+key = document.querySelectorAll(".btn");
+console.log(key[0]);
+key.forEach((element) =>{
+    element.addEventListener("click",()=>{
+        console.log("hai cliccato il tasto "+element.value);
+        letter = element.value;
+    });
+});
+};
