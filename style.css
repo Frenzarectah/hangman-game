@@ -68,4 +68,8 @@ body{
     width:60%;
     height:auto;
 }
+.hint{
+    display:flex;
+    flex-direction: column;
+}
 }

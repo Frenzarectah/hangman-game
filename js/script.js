@@ -1,3 +1,4 @@
+
 const guess = [{word:"sedia",hint:"si usa per poggiare le chiappe"},
                 {word:"mucca",hint:"si mangia"},
                 {word:"ciola",hint:"si succhia"},
@@ -5,6 +6,11 @@ const guess = [{word:"sedia",hint:"si usa per poggiare le chiappe"},
                 {word:"cracco",hint:"tu sei un culo"},
                 {word:"cannavacciuolo",hint:"e disc sin!"},
             ];
+window.onload = () =>{
+    var letter = "";
+    key = document.querySelectorAll(".btn");
+    key.forEach(element => addEvent(element));
+};
 var startGame = () =>{
     var button = document.querySelector(".start_btn");
     button.style.display="none";
@@ -16,12 +22,18 @@ var startGame = () =>{
     hint_div.innerHTML=`<h2>PAROLA: ${writing}</h2>
                         <h2>SUGGERIMENTO: ${guess[rndomIdx].hint}</h2>
     `;
+    search(guess[rndomIdx].word,"c");
     rndomIdx = Math.round(Math.random() * guess.length-1);
 };
-document.onload = ()=>{
-keyb = document.querySelectorAll(".btn");
-console.log(keyb);
-keyb.addEventListener("click",()=>{
-    console.log("hai cliccato qualcosa qui su keyboard!");
-});
-};
+addEvent=(key)=>{
+    var val = "";
+    key.addEventListener("click",()=>{
+        val = key.value;
+        //console.log("hai cliccato il tasto "+val);
+        return val;
+    });
+}
+var search = (word,letter) =>{
+    if (word.includes(letter) === true) console.log("la lettera "+letter+" è presente in "+word);
+}
+
