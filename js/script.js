@@ -21,13 +21,17 @@ var startGame = () =>{
     rndomIdx = Math.round(Math.random() * guess.length-1);
 };
 var search = (word,letter) =>{
-    var parola = "";
+    var parola;
+    var parola1 = [];
     if (word.includes(letter) === true){
         var pos = word.indexOf(letter);
-        var h2 = document.getElementsByTagName("h2")[1];
-        parola[pos] = letter;
-        console.log(parola);
-        h2.innerHTML = parola;
+        var parola = document.getElementsByTagName("h2")[1].innerHTML;
+        console.log("la word è al momento"+parola);
+        for(i=0;i<=word.length-1;i++){
+            if(i===pos){ parola1[i]=letter;
+            }else parola1[i]="_";
+        }
+        console.log(parola1+" dopo replace che non funge un cazzo");
         console.log("la lettera "+letter+" è presente in "+word+" in posizione "+pos);
     } 
 }
