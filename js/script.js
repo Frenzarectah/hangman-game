@@ -25,18 +25,13 @@ var startGame = () =>{
 };
 var search = (word,letter) =>{
     var parola = [];
-        if (word.includes(letter) === true){
-            var pos = word.indexOf(letter);
-            for(i=0;i<=word.length-1;i++){
-                var ausil = document.getElementsByTagName("h2")[1].innerHTML;
-                parola[i] = ausil[i];    
-                console.log(ausil);
-            }
-            //var parola = document.getElementsByTagName("h2")[1].innerHTML; // recupero dell'array parola in startGame();
-            //console.log(parola[1]);
-            console.log("la lettera "+letter+" è presente in "+word+" in posizione "+pos);
-        }else console.log("CIAO"); 
-}
+        for(i=0;i<=word.length-1;i++){
+            if (word[i] === letter){
+            parola[i] = letter;
+            }else parola[i]="_";
+        };
+    console.log(parola);
+} 
 var extractNum = () =>{
     var letter = "";
 key = document.querySelectorAll(".btn");
