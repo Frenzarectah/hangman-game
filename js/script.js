@@ -31,6 +31,8 @@ var search = (word,letter) =>{
             }else parola[i]="_";
         };
     console.log(parola);
+    parola = parola.join(" ");
+    document.getElementsByTagName("h2")[1].innerHTML = parola;
 } 
 var extractNum = () =>{
     var letter = "";
