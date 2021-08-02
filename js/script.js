@@ -21,12 +21,12 @@ var startGame = () =>{
                         <h2>SUGGERIMENTO: ${guess[rndomIdx].hint}</h2>
     `;
     rndomIdx = Math.round(Math.random() * guess.length-1);
-    console.log(parola);
+    //console.log(parola);
 };
+var parola = [];
 var search = (word,letter) =>{
-    var parola = [];
         for(i=0;i<=word.length-1;i++){
-            if (word[i] === letter){
+            if ((word[i] === letter)){
             parola[i] = letter;
             }else parola[i]="_";
         };
