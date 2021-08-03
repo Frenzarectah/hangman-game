@@ -8,31 +8,33 @@ const guess = [{word:"sedia",hint:"si usa per poggiare le chiappe"},
             ];
 
 var startGame = () =>{
-    var parola = [];
+    var guessWrd = [];
     var button = document.querySelector(".start_btn");
     button.style.display="none";
     var rndomIdx = Math.round(Math.random() * guess.length-1);
     for(i=0;i<=((guess[rndomIdx].word).length)-1;i++){
-        parola[i]="_";
+        guessWrd[i]="_";
     }  
     var hint_div = document.querySelector(".hint");
     worde = guess[rndomIdx].word;
-    hint_div.innerHTML=`<h2>PAROLA:</h2> <h2>${parola.join(" ")}</h2>
+    hint_div.innerHTML=`<h2>PAROLA:</h2> <h2>${guessWrd.join(" ")}</h2>
                         <h2>SUGGERIMENTO: ${guess[rndomIdx].hint}</h2>
     `;
     rndomIdx = Math.round(Math.random() * guess.length-1);
-    //console.log(parola);
 };
-var parola = [];
 var search = (word,letter) =>{
+    var parola = document.getElementsByTagName("h2")[1].innerHTML;
         for(i=0;i<=word.length-1;i++){
-            if ((word[i] === letter)){
+            if ((word[i] === letter)&&(word[i]==="_")){
             parola[i] = letter;
-            }else parola[i]="_";
-        };
+            var guessed = true;
+            }//else parola[i]="_";
+        }
     console.log(parola);
-    parola = parola.join(" ");
-    document.getElementsByTagName("h2")[1].innerHTML = parola;
+    if (guessed === true){
+        parola = parola.join(" ");
+        document.getElementsByTagName("h2")[1].innerHTML = parola;
+    }
 } 
 var extractNum = () =>{
     var letter = "";
