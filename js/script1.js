@@ -23,6 +23,7 @@ hint_div.innerHTML=`<h2>PAROLA:</h2> <h2>${guessWrd.join("")}</h2>
 rndomIdx = Math.round(Math.random() * guess.length-1);
 };
 var search =(word,letter)=>{
+    var guessed = false;
     var DomWord = document.getElementsByTagName("h2")[1].innerHTML;
     var parola = [];
     for(i=0;i<=DomWord.length-1;i++) parola[i] = DomWord[i];
@@ -31,13 +32,16 @@ var search =(word,letter)=>{
         if (word[i] === letter){
         parola[i] = letter;
         var guessed = true;
-        }
+        }//else notGuessing();
     }
-console.log(parola);
-if (guessed === true){
-    parola = parola.join("");
-    document.getElementsByTagName("h2")[1].innerHTML = parola;
+    guessing(guessed,parola);
 }
+var guessing =(guessBool,guessWord) =>{
+    if(guessBool === true){
+        guessWord = guessWord.join("");
+    document.getElementsByTagName("h2")[1].innerHTML = guessWord;
+    if (guessWord.includes("_") === false) document.getElementsByTagName("div")[0].innerHTML = "EVVIVA HAI SALVATO IL MORTO!";
+    }
 }
 var extractNum = () =>{
 var letter = "";
