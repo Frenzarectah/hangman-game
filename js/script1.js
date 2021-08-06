@@ -40,7 +40,8 @@ var guessing =(guessBool,guessWord) =>{
     if(guessBool === true){
         guessWord = guessWord.join("");
     document.getElementsByTagName("h2")[1].innerHTML = guessWord;
-    if (guessWord.includes("_") === false) document.getElementsByTagName("div")[0].innerHTML = "EVVIVA HAI SALVATO IL MORTO!";
+    if (guessWord.includes("_") === false) document.getElementsByTagName("div")[0].innerHTML = `EVVIVA HAI SALVATO IL MORTO!
+    <input type="button" value="rigioca" class="btn" onclick="window.location.reload()"> `;
     }
 }
 var extractNum = () =>{

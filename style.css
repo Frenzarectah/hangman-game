@@ -9,6 +9,14 @@ body{
 }
 .dokdo_title{
     font-size:7vw;
+    justify-content: center;
+}
+.btn{
+    background-color:transparent;
+    width:20%;
+    height:10%;
+    font-family:'Dokdo';
+    font-size:3vw;
 }
 .start_btn{
     margin-bottom:5%;
