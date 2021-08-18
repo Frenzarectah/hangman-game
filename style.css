@@ -55,6 +55,9 @@ body{
 .btn:focus{
     background-color:red;
 }
+.btn_disp_none{
+    display:none;
+}
 
 @media only screen and (min-width:250px) and (max-width: 600px){
     .start_btn{

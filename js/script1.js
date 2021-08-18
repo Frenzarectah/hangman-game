@@ -6,6 +6,7 @@ const guess = [{word:"sedia",hint:"si usa per poggiare le chiappe"},
 {word:"cracco",hint:"tu sei un culo"},
 {word:"cannavacciuolo",hint:"e disc sin!"},
 ];
+var x = 0;
 
 var startGame = () =>{
 var guessWrd = [];
@@ -32,7 +33,7 @@ var search =(word,letter)=>{
         if (word[i] === letter){
         parola[i] = letter;
         var guessed = true;
-        }//else notGuessing();
+        }
     }
     guessing(guessed,parola);
 }
@@ -41,8 +42,20 @@ var guessing =(guessBool,guessWord) =>{
         guessWord = guessWord.join("");
     document.getElementsByTagName("h2")[1].innerHTML = guessWord;
     if (guessWord.includes("_") === false) document.getElementsByTagName("div")[0].innerHTML = "EVVIVA HAI SALVATO IL MORTO!";
-    }
+    }else notGuessing();
 }
+var notGuessing = () =>{
+    if(x<4){
+    x = x+1;
+    var img = document.querySelector(".hangman");
+    img.src = "imgs/image"+x+".jpeg";
+    }else{  document.getElementsByTagName("div")[0].innerHTML=" GAME OVER!";
+            document.getElementsByClassName("main_container")[0].style.display="none";    
+            document.getElementsByClassName("keyboard")[0].style.display="none";
+            document.getElementsByClassName("btn_disp_none")[0].style.display="block"; 
+    }    
+}
+
 var extractNum = () =>{
 var letter = "";
 key = document.querySelectorAll(".btn");
