@@ -41,7 +41,6 @@ var guessing =(guessBool,guessWord) =>{
     if(guessBool === true){
         guessWord = guessWord.join("");
     document.getElementsByTagName("h2")[1].innerHTML = guessWord;
-<<<<<<< HEAD
     if (guessWord.includes("_") === false) document.getElementsByTagName("div")[0].innerHTML = "EVVIVA HAI SALVATO IL MORTO!";
     }else notGuessing();
 }
@@ -54,14 +53,8 @@ var notGuessing = () =>{
             document.getElementsByClassName("main_container")[0].style.display="none";    
             document.getElementsByClassName("keyboard")[0].style.display="none";
             document.getElementsByClassName("btn_disp_none")[0].style.display="block"; 
-    }    
-=======
-    if (guessWord.includes("_") === false) document.getElementsByTagName("div")[0].innerHTML = `EVVIVA HAI SALVATO IL MORTO!
-    <input type="button" value="rigioca" class="btn" onclick="window.location.reload()"> `;
-    }
->>>>>>> b56c40d299da0526dde6a36d3a2eb0e940a700e2
+    } 
 }
-
 var extractNum = () =>{
 var letter = "";
 key = document.querySelectorAll(".btn");
