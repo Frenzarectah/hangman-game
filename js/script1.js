@@ -1,4 +1,5 @@
 
+
 const guess = [{word:"sedia",hint:"si usa per poggiare le chiappe"},
 {word:"mucca",hint:"si mangia"},
 {word:"ciola",hint:"si succhia"},
@@ -59,11 +60,13 @@ var extractNum = () =>{
 var letter = "";
 key = document.querySelectorAll(".btn");
 key.forEach((element) =>{
-element.addEventListener("click",()=>letter = addEvent(element.value));
+element.addEventListener("click",()=>letter = addEvent(element));
 });
 }
+
 var addEvent=(key)=>{
-console.log("pulsante premuto:"+key);
-search(worde,key);
+console.log("pulsante premuto:"+key.value);
+key.style.backgroundColor="red";
+search(worde,key.value);
 return true;
 }
