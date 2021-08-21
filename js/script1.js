@@ -1,14 +1,16 @@
 
-
 const guess = [{word:"sedia",hint:"si usa per poggiare le chiappe"},
-{word:"mucca",hint:"si mangia"},
-{word:"ciola",hint:"si succhia"},
+{word:"lello",hint:"non sta mbriacato"},
+{word:"cazzo",hint:"si ciuccia"},
 {word:"bastianic",hint:"so duri sti gnocchetti"},
 {word:"cracco",hint:"tu sei un culo"},
 {word:"cannavacciuolo",hint:"e disc sin!"},
+{word:"ortonova",hint:"procrastinazione incarnata"},
+{word:"albino",hint:"basta tirare uno schiaffo tranguillo"},
+{word:"fabio",hint:"che bono mamma mia"},
+{word:"mavco giovdano",hint:"i sapovi della mia tevva"},
 ];
 var x = 0;
-
 var startGame = () =>{
 var guessWrd = [];
 var button = document.querySelector(".start_btn");
@@ -41,8 +43,11 @@ var search =(word,letter)=>{
 var guessing =(guessBool,guessWord) =>{
     if(guessBool === true){
         guessWord = guessWord.join("");
-    document.getElementsByTagName("h2")[1].innerHTML = guessWord;
-    if (guessWord.includes("_") === false) document.getElementsByTagName("div")[0].innerHTML = "EVVIVA HAI SALVATO IL MORTO!";
+        document.getElementsByTagName("h2")[1].innerHTML = guessWord;
+        if (guessWord.includes("_") === false){ 
+            document.getElementsByTagName("div")[0].innerHTML = "EVVIVA HAI SALVATO IL MORTO!";
+            document.getElementsByClassName("btn_disp_none")[0].style.display="block"; 
+        }
     }else notGuessing();
 }
 var notGuessing = () =>{
