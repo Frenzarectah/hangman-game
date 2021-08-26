@@ -75,7 +75,8 @@ body{
     height:auto;
 }
 .image{
-    width:60%;
+    width:50%;
+    align-self: left;
     height:auto;
 }
 .hint{

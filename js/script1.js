@@ -11,6 +11,7 @@ const guess = [{word:"sedia",hint:"si usa per poggiare le chiappe"},
 {word:"mavco giovdano",hint:"i sapovi della mia tevva"},
 ];
 var x = 0;
+
 var startGame = () =>{
 var guessWrd = [];
 var button = document.querySelector(".start_btn");
@@ -26,12 +27,13 @@ hint_div.innerHTML=`<h2>PAROLA:</h2> <h2>${guessWrd.join("")}</h2>
 `;
 rndomIdx = Math.round(Math.random() * guess.length-1);
 };
+
+
 var search =(word,letter)=>{
     var guessed = false;
     var DomWord = document.getElementsByTagName("h2")[1].innerHTML;
     var parola = [];
     for(i=0;i<=DomWord.length-1;i++) parola[i] = DomWord[i];
-    //console.log(parola);
     for(i=0;i<=word.length-1;i++){
         if (word[i] === letter){
         parola[i] = letter;
@@ -39,6 +41,7 @@ var search =(word,letter)=>{
         }
     }
     guessing(guessed,parola);
+    return guessed;
 }
 var guessing =(guessBool,guessWord) =>{
     if(guessBool === true){
@@ -75,3 +78,5 @@ key.style.backgroundColor="red";
 search(worde,key.value);
 return true;
 }
+
+module.export={search};
