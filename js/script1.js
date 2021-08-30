@@ -1,14 +1,14 @@
 
 const guess = [{word:"sedia",hint:"si usa per poggiare le chiappe"},
-{word:"lello",hint:"non sta mbriacato"},
-{word:"cazzo",hint:"si ciuccia"},
-{word:"bastianic",hint:"so duri sti gnocchetti"},
-{word:"cracco",hint:"tu sei un culo"},
-{word:"cannavacciuolo",hint:"e disc sin!"},
-{word:"ortonova",hint:"procrastinazione incarnata"},
-{word:"albino",hint:"basta tirare uno schiaffo tranguillo"},
-{word:"fabio",hint:"che bono mamma mia"},
-{word:"mavco giovdano",hint:"i sapovi della mia tevva"},
+{word:"fattura",hint:"permette di riscattare la garanzia"},
+{word:"monitor",hint:"indispensabile per usare il computer"},
+{word:"treppiedi",hint:"si usa per diminuire gli scossoni durante le foto"},
+{word:"cracco",hint:"famoso cuoco stellato"},
+{word:"idraulico",hint:"è famoso quello dei videogiochi"},
+{word:"google",hint:"il sito web pii' usato del mondo"},
+{word:"tappetino",hint:"si usa sia per il mouse che per i pavimenti"},
+{word:"michelangelo",hint:"famoso scultore italiano"},
+{word:"reykjavik",hint:"capitale europea nordica"},
 ];
 var x = 0;
 
@@ -47,8 +47,9 @@ var guessing =(guessBool,guessWord) =>{
     if(guessBool === true){
         guessWord = guessWord.join("");
         document.getElementsByTagName("h2")[1].innerHTML = guessWord;
-        if (guessWord.includes("_") === false){ 
+        if (guessWord.includes("_") === false){ //se la stringa da indovinare non contiene piu' underscore si considera vinta la partita
             document.getElementsByTagName("div")[0].innerHTML = "EVVIVA HAI SALVATO IL MORTO!";
+            document.querySelector(".hangman").src="imgs/image5.jpeg";
             document.getElementsByClassName("btn_disp_none")[0].style.display="block"; 
         }
     }else notGuessing();
