@@ -29,12 +29,10 @@ body{
 .main_container{
     display:flex;
     width:80%;
-    border:1px black solid;
     flex-direction: row;
     justify-content: space-around;
 }
 .hint{
-    border:1px black solid;
     width:50%;
     justify-self:normal;
     font-size:2vw;
@@ -44,7 +42,6 @@ body{
 }
 .keyboard{
     display:flex;
-    border:1px black solid;
     align-items:center;
     flex-wrap:wrap;
 }
@@ -59,9 +56,6 @@ body{
     font-family: 'Dokdo',cursive;
     font-size:100%;
 }
-/*.btn:focus{
-    background-color:red;
-}*/
 .btn_disp_none{
     display:none;
 }
