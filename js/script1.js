@@ -23,11 +23,9 @@ guessWrd[i]="_";
 var hint_div = document.querySelector(".hint");
 worde = guess[rndomIdx].word; //parola in chiaro da indovinare
 hint_div.innerHTML=`<h2>PAROLA:</h2> <h2>${guessWrd.join("")}</h2>
-        <h2>SUGGERIMENTO: ${guess[rndomIdx].hint}</h2>
-`;
+                    <h2>SUGGERIMENTO: ${guess[rndomIdx].hint}</h2>`;
 rndomIdx = Math.round(Math.random() * guess.length-1);
 };
-
 
 var search =(word,letter)=>{
     var guessed = false;
@@ -49,7 +47,7 @@ var guessing =(guessBool,guessWord) =>{
         document.getElementsByTagName("h2")[1].innerHTML = guessWord;
         if (guessWord.includes("_") === false){ //se la stringa da indovinare non contiene piu' underscore si considera vinta la partita
             document.getElementsByTagName("div")[0].innerHTML = "EVVIVA HAI SALVATO IL MORTO!";
-            document.querySelector(".hangman").src="imgs/image5.jpeg";
+            document.querySelector(".hangman").src="imgs/image5.jpg";
             document.getElementsByClassName("btn_disp_none")[0].style.display="block"; 
         }
     }else notGuessing();
@@ -58,7 +56,7 @@ var notGuessing = () =>{
     if(x<4){
     x = x+1;
     var img = document.querySelector(".hangman");
-    img.src = "imgs/image"+x+".jpeg";
+    img.src = "imgs/image"+x+".jpg";
     }else{  document.getElementsByTagName("div")[0].innerHTML=" GAME OVER!";
             document.getElementsByClassName("main_container")[0].style.display="none";    
             document.getElementsByClassName("keyboard")[0].style.display="none";
