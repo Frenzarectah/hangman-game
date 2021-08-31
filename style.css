@@ -7,6 +7,9 @@ body{
     align-items: center;
     flex-direction: column;
 }
+.hangman{
+    display:none;
+}
 .dokdo_title{
     font-size:7vw;
     justify-content: center;
