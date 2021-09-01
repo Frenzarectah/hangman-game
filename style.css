@@ -74,7 +74,7 @@ body{
     width:97%;
 }
 .start_btn{
-        height:5%;
+        height:10%;
         width:50%;
 }
 .btn{
@@ -93,5 +93,8 @@ body{
 .hint{
     display:flex;
     flex-direction: column;
+}
+.keyboard{
+    width:98%;
 }
 }
