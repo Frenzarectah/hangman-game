@@ -5,10 +5,14 @@ body{
     width:100%;
     font-family: 'Dokdo', cursive;
     align-items: center;
+    background-image: url(./imgs/back_squared_dark.jpeg);
     flex-direction: column;
 }
 .hangman{
     display:none;
+}
+.white{
+    color:white;
 }
 .dokdo_title{
     font-size:7vw;
@@ -17,6 +21,7 @@ body{
 .btn{
     background-color:transparent;
     width:20%;
+    color:white;
     height:10%;
     font-family:'Dokdo';
     font-size:3vw;
@@ -33,7 +38,8 @@ body{
     display:flex;
     width:80%;
     flex-direction: row;
-    justify-content: space-around;
+    align-items:center;
+    justify-content: center;
 }
 .hint{
     width:50%;
