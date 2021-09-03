@@ -47,7 +47,7 @@ var guessing =(guessBool,guessWord) =>{
         document.getElementsByTagName("h2")[1].innerHTML = guessWord;
         if (guessWord.includes("_") === false){ //se la stringa da indovinare non contiene piu' underscore si considera vinta la partita
             document.getElementsByTagName("div")[0].innerHTML = "EVVIVA HAI SALVATO IL MORTO!";
-            document.querySelector(".hangman").src="imgs/image5.jpg";
+            //document.querySelector(".hangman").src="imgs/image5.jpg";
             document.getElementsByClassName("btn_disp_none")[0].style.display="block"; 
         }
     }else notGuessing();
@@ -55,10 +55,10 @@ var guessing =(guessBool,guessWord) =>{
 var notGuessing = () =>{
     if(x<4){
     x = x+1;
-    var img = document.querySelector(".hangman");
-    var body = document.getElementsByTagName("body")[0];
-    body.style.backgroundImage='url(imgs/imgs_once/image'+x+'.jpg)';
-    img.src = "imgs/image"+x+".jpg";
+    //var img = document.querySelector(".hangman");
+    var page = document.querySelector("#page");
+    page.style.backgroundImage='url(imgs/imgs_once/image'+x+'.jpg)';
+    //img.src = "imgs/image"+x+".jpg";
     }else{  document.getElementsByTagName("div")[0].innerHTML=" GAME OVER!";
             document.getElementsByClassName("main_container")[0].style.display="none";    
             document.getElementsByClassName("keyboard")[0].style.display="none";
@@ -76,7 +76,7 @@ element.addEventListener("click",()=>letter = addEvent(element));
 var addEvent=(key)=>{
 console.log("pulsante premuto:"+key.value);
 key.style.backgroundColor="red";
-search(worde,key.value);
+search(worde.toUpperCase(),key.value);
 return true;
 }
 

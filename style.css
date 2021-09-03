@@ -1,15 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Yomogi&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dokdo&display=swap');
-/*body{
-    display:flex;
-    
-}*/
+
 #page{
+    display:flex;
     font-family: 'Dokdo', cursive;
     width:100%;
     height:100%;
-    /*align-items: center;*/
-    justify-content: center;
+    align-items:center;
+    justify-content:flex-start;
     flex-direction: column;
     background-image: url(./imgs/imgs_once/image0.jpg);
     background-repeat: no-repeat;
@@ -45,6 +43,7 @@
 .main_container{
     display:flex;
     width:80%;
+    font-family: 'Dokdo';
     flex-direction: column;
     align-items:center;
     justify-content: center;
@@ -79,7 +78,7 @@
 }
 
 @media only screen and (min-width:250px) and (max-width: 600px){
-body{
+#page{
     width:97%;
 }
 .start_btn{
