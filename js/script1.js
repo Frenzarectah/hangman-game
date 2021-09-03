@@ -15,8 +15,6 @@ var x = 0;
 var startGame = () =>{
 var guessWrd = [];
 var button = document.querySelector(".start_btn");
-var hangImg = document.querySelector(".hangman");
-hangImg.style.display="block";
 button.style.display="none";
 var rndomIdx = Math.round(Math.random() * guess.length-1);
 for(i=0;i<=((guess[rndomIdx].word).length)-1;i++){
@@ -58,6 +56,8 @@ var notGuessing = () =>{
     if(x<4){
     x = x+1;
     var img = document.querySelector(".hangman");
+    var body = document.getElementsByTagName("body")[0];
+    body.style.backgroundImage='url(imgs/imgs_once/image'+x+'.jpg)';
     img.src = "imgs/image"+x+".jpg";
     }else{  document.getElementsByTagName("div")[0].innerHTML=" GAME OVER!";
             document.getElementsByClassName("main_container")[0].style.display="none";    

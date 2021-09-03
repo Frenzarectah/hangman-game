@@ -7,13 +7,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body onload="extractNum();">
+        <div id="page">
         <div class="dokdo_title white">
             .:HANGMAN GAME:.
         </div>
         <input type="button" class="start_btn white" value="GIOCA!" onclick="startGame();">
         <input type="button" class="btn btn_disp_none white" value="RETRY" onclick="window.location.reload();">
         <div class="main_container">
-            <div class="image"><img class="hangman" src="imgs/image0.jpg"></div>
             <div class="hint white"></div>
         </div>
         <div class="keyboard white">
@@ -43,6 +43,7 @@
             <input type="button" class="btn x_btn" value="X">
             <input type="button" class="btn y_btn" value="Y">
             <input type="button" class="btn z_btn" value="Z">
+        </div>
         </div>
     </body>
 </html>
