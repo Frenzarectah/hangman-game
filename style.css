@@ -1,9 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Yomogi&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Dokdo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
 
 #page{
     display:flex;
-    font-family: 'Dokdo', cursive;
+    font-family: 'Amatic SC', cursive;
     width:100%;
     height:100%;
     align-items:center;
@@ -20,16 +19,16 @@
 .white{
     color:white;
 }
-.dokdo_title{
+.amatic_title{
     font-size:7vw;
     justify-content: center;
 }
 .btn{
     background-color:transparent;
-    width:20%;
+    width:25%;
     color:white;
     height:10%;
-    font-family:'Dokdo';
+    font-family:'Amatic SC';
     font-size:3vw;
 }
 .start_btn{
@@ -37,13 +36,13 @@
     width:20%;
     height:10%;
     background-color:transparent;
-    font-family: 'Dokdo';
+    font-family: 'Amatic SC';
     font-size:2vw;
 }
 .main_container{
     display:flex;
     width:80%;
-    font-family: 'Dokdo';
+    font-family: 'Amatic SC';
     flex-direction: column;
     align-items:center;
     justify-content: center;
@@ -69,8 +68,8 @@
 .btn{
     width:25%;
     height: auto;
-    background-color: transparent;
-    font-family: 'Dokdo',cursive;
+    border-radius: 5px;
+    font-family: 'Amatic SC',cursive;
     font-size:100%;
 }
 .btn_disp_none{
@@ -95,7 +94,6 @@
 }
 .image{
     width:50%;
-    /*align-self: left;*/
     height:auto;
 }
 .hint{

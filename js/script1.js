@@ -46,7 +46,7 @@ var guessing =(guessBool,guessWord) =>{
         guessWord = guessWord.join("");
         document.getElementsByTagName("h2")[1].innerHTML = guessWord;
         if (guessWord.includes("_") === false){ //se la stringa da indovinare non contiene piu' underscore si considera vinta la partita
-            document.getElementsByClassName("dokdo_title")[0].innerHTML = "EVVIVA HAI SALVATO IL MORTO!";
+            document.getElementsByClassName("amatic_title")[0].innerHTML = "EVVIVA HAI SALVATO IL MORTO!";
             document.getElementById("retry").style.display="block"; 
         }
     }else notGuessing();
@@ -56,7 +56,7 @@ var notGuessing = () =>{
     x = x+1;
     var page = document.querySelector("#page");
     page.style.backgroundImage='url(imgs/imgs_once/image'+x+'.webp)';
-    }else{  document.getElementsByClassName("dokdo_title")[0].innerHTML=" GAME OVER!";
+    }else{  document.getElementsByClassName("amatic_title")[0].innerHTML=" GAME OVER!";
             document.getElementsByClassName("main_container")[0].style.display="none";    
             document.getElementsByClassName("keyboard")[0].style.display="none";
             document.getElementById("retry").style.display="block"; 
