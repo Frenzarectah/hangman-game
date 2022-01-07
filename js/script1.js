@@ -62,15 +62,15 @@ var notGuessing = () =>{
             document.getElementById("retry").style.display="block"; 
     } 
 }
-var extractNum = () =>{
+var addingEvent = () =>{
 var letter = "";
 key = document.querySelectorAll(".btn");
 key.forEach((element) =>{
-element.addEventListener("click",()=>letter = addEvent(element));
+element.addEventListener("click",()=>letter = addedEvent(element));
 });
 }
 
-var addEvent=(key)=>{
+var addedEvent=(key)=>{
 console.log("pulsante premuto:"+key.value);
 key.style.backgroundColor="red";
 search(worde.toUpperCase(),key.value);
