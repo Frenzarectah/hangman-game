@@ -72,7 +72,7 @@ element.addEventListener("click",()=>letter = addedEvent(element));
 
 var addedEvent=(key)=>{
 console.log("pulsante premuto:"+key.value);
-key.style.backgroundColor="red";
+key.disabled="true";
 search(worde.toUpperCase(),key.value);
 return true;
 }
