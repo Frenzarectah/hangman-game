@@ -1,5 +1,5 @@
 *creazione mappa di parole/suggerimenti*
--al load si aggiunge all'intera tastiera l'evento
+-al load si aggiunge all'intera tastiera l'evento al click (search)
 -click startgame
 -creazione degli elementi parola/trattini/suggerimenti
 -prende una parola a caso (round+rndom) e ne stampa solo i trattini
