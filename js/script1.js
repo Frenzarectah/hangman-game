@@ -1,6 +1,6 @@
 
 const guess = [{word:"sedia",hint:"si usa per poggiare le chiappe"},
-{word:"fattura",hint:"permette di riscattare la garanzia"},
+{word:"scontrino",hint:"permette di riscattare la garanzia"},
 {word:"monitor",hint:"indispensabile per usare il computer"},
 {word:"treppiedi",hint:"si usa per diminuire gli scossoni durante le foto"},
 {word:"cracco",hint:"famoso cuoco stellato"},
@@ -10,7 +10,7 @@ const guess = [{word:"sedia",hint:"si usa per poggiare le chiappe"},
 {word:"michelangelo",hint:"famoso scultore italiano"},
 {word:"reykjavik",hint:"capitale europea nordica"},
 ];
-var x = 0;
+var attempts = 0;
 
 var startGame = () =>{
 var guessWrd = [];
@@ -30,8 +30,8 @@ rndomIdx = Math.round(Math.random() * guess.length-1);
 var search =(word,letter)=>{
     var guessed = false;
     var DomWord = document.getElementsByTagName("h2")[1].innerHTML;
-    var parola = [];
-    for(i=0;i<=DomWord.length-1;i++) parola[i] = DomWord[i];
+    var parola = []; 
+    for(i=0;i<=DomWord.length-1;i++) parola[i] = DomWord[i]; //creazione array da stringa per manipolazione
     for(i=0;i<=word.length-1;i++){
         if (word[i] === letter){
         parola[i] = letter;
@@ -43,7 +43,7 @@ var search =(word,letter)=>{
 }
 var guessing =(guessBool,guessWord) =>{
     if(guessBool === true){
-        guessWord = guessWord.join("");
+        guessWord = guessWord.join(""); //elimina virgole da array
         document.getElementsByTagName("h2")[1].innerHTML = guessWord;
         if (guessWord.includes("_") === false){ //se la stringa da indovinare non contiene piu' underscore si considera vinta la partita
             document.getElementsByClassName("amatic_title")[0].innerHTML = "EVVIVA HAI SALVATO IL MORTO!";
@@ -52,10 +52,10 @@ var guessing =(guessBool,guessWord) =>{
     }else notGuessing();
 }
 var notGuessing = () =>{
-    if(x<4){
-    x = x+1;
+    if(attempts<4){
+    attempts++;
     var page = document.querySelector("#page");
-    page.style.backgroundImage='url(imgs/imgs_once/image'+x+'.webp)';
+    page.style.backgroundImage='url(imgs/imgs_once/image'+attempts+'.webp)';
     }else{  document.getElementsByClassName("amatic_title")[0].innerHTML=" GAME OVER!";
             document.getElementsByClassName("main_container")[0].style.display="none";    
             document.getElementsByClassName("keyboard")[0].style.display="none";

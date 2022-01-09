@@ -8,7 +8,7 @@
     align-items:center;
     justify-content:flex-start;
     flex-direction: column;
-    background-image: url(./imgs/imgs_once/image0.jpg);
+    background-image: url(./imgs/imgs_once/image0.webp);
     background-repeat: no-repeat;
     background-size: cover;
     position: fixed;
@@ -95,6 +95,7 @@
 .hint{
     display:flex;
     flex-direction: column;
+    font-size:4vw;
 }
 .keyboard{
     width:98%;
