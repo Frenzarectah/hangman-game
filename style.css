@@ -19,6 +19,9 @@
 .white{
     color:white;
 }
+.black{
+    color:black;
+}
 .amatic_title{
     font-size:7vw;
     justify-content: center;
@@ -26,7 +29,6 @@
 .btn{
     background-color:transparent;
     width:25%;
-    color:white;
     height:10%;
     font-family:'Amatic SC';
     font-size:3vw;

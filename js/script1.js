@@ -77,4 +77,4 @@ search(worde.toUpperCase(),key.value);
 return true;
 }
 
-module.export={search};
+module.export={search,startGame};
