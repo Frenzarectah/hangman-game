@@ -1,11 +1,11 @@
-const funct = require('./script1');
+const startGame = require('./script1');
 
-test('displays a user after a click', () => {
+test('creating DOM after a click', () => {
     document.body.innerHTML =`
-    <input type="button" id="btn" class="start_btn white" value="GIOCA!" onClick=funct.startGame()>
+    <input type="button" id="btn" class="start_btn white" value="GIOCA!" onClick="startGame">
     <div class="hint white">denari</div>`;
     var btn = document.querySelector("#btn");
     var divtest = document.querySelector(".hint");
     btn.click();
-    expect(divtest.innerHTML).toContain(`<div class="keyboard black">`);
+    expect(startGame).toBe(5);
 });
