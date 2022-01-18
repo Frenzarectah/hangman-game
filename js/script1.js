@@ -42,6 +42,7 @@ var search =(word,letter)=>{
     guessing(guessed,parola);
     return guessed;
 }
+
 var guessing =(guessBool,guessWord) =>{
     if(guessBool === true){
         guessWord = guessWord.join(""); //elimina virgole da array

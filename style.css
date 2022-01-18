@@ -26,13 +26,6 @@
     font-size:7vw;
     justify-content: center;
 }
-.btn{
-    background-color:transparent;
-    width:25%;
-    height:10%;
-    font-family:'Amatic SC';
-    font-size:3vw;
-}
 .start_btn{
     margin-bottom:5%;
     width:20%;
@@ -68,11 +61,12 @@
     height:auto;
 }
 .btn{
-    width:25%;
+    background-color:transparent;
+    width:15%;
     height: auto;
     border-radius: 5px;
     font-family: 'Amatic SC',cursive;
-    font-size:100%;
+    font-size:8wh;
 }
 .btn_disp_none{
     display:none;
