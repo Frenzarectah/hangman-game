@@ -65,6 +65,10 @@ const notGuessing = () =>{
             document.getElementsByClassName("title")[0].innerHTML=" GAME OVER!";
             document.getElementsByClassName("main_container")[0].style.display="none";    
             document.getElementsByClassName("keyboard")[0].style.display="none";
+            let page = document.getElementById("page");
+            let image = document.createElement("img");
+            image.src="imgs/imgs_once/image5.png";
+            page.appendChild(image);
             document.getElementById("retry").style.display="block"; 
         } 
 }
