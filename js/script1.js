@@ -12,6 +12,19 @@ const guess = [ {word:"sedia",hint:"si usa per poggiare le natiche"},
 ];
 let attempts = 0;
 let worde;
+const createKeyb = ()=>{
+    const alpha = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+let keyb = document.getElementById("keyb");
+let i=0;
+for(i=0;i<=alpha.length-1;i++){
+  let btn =document.createElement('button');
+  btn.classList.add("btn");
+  let classe = alpha[i].innerHTML();
+  btn.classList.add(classe+"_btn");
+  btn.innerHTML=alpha[i];
+  keyb.appendChild(btn);
+}
+}
 const startGame = () =>{
     let guessWrd = [];
     let button = document.querySelector(".start_btn");
@@ -74,6 +87,7 @@ const notGuessing = () =>{
 }
 const addingEvent = () =>{    //funzione che aggiunge a tutti i tasti della tastiera 
     let letter = "";        //l'evento addEvent di cui sotto
+    createKeyb();
     key = document.querySelectorAll(".btn");
     key.forEach((element) =>{
         element.addEventListener("click",()=>letter = addedEvent(element));
