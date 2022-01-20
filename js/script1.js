@@ -21,6 +21,8 @@ const startGame = () =>{
         guessWrd[i]="_";
 }  
     let hint_div = document.querySelector(".hint"); 
+    let img = document.querySelector(".hangman");
+    img.style.display="inline";
     worde = guess[rndomIdx].word; //parola in chiaro da indovinare
     hint_div.innerHTML=`<h2>PAROLE:</h2> <h2>${guessWrd.join("")}</h2> 
                         <h2>SUGGERIMENTO: ${guess[rndomIdx].hint}</h2>`;
@@ -54,15 +56,17 @@ let guessing =(guessBool,guessWord) =>{
     }else notGuessing();
 }
 const notGuessing = () =>{
-    if(attempts<4){
-    attempts++;
-    let page = document.querySelector("#page");
-    page.style.backgroundImage='url(imgs/imgs_once/image'+attempts+'.webp)';  //cambia sfondo
-    }else{  document.getElementsByClassName("title")[0].innerHTML=" GAME OVER!";
+    if(attempts<=3){
+        attempts++;
+        let img = document.querySelector(".hangman");
+        console.log(attempts);
+        img.src="imgs/imgs_once/image"+attempts+".png";
+        }else{  
+            document.getElementsByClassName("title")[0].innerHTML=" GAME OVER!";
             document.getElementsByClassName("main_container")[0].style.display="none";    
             document.getElementsByClassName("keyboard")[0].style.display="none";
             document.getElementById("retry").style.display="block"; 
-    } 
+        } 
 }
 const addingEvent = () =>{    //funzione che aggiunge a tutti i tasti della tastiera 
     let letter = "";        //l'evento addEvent di cui sotto

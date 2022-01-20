@@ -16,6 +16,8 @@
 }
 .hangman{
     display:none;
+    width:200px;
+    height:auto;
 }
 .black{
     color:black;
@@ -35,14 +37,16 @@
     display:flex;
     width:80%;
     font-family: 'Amatic SC';
-    flex-direction: column;
+    flex-direction: row;
     align-items:center;
     justify-content: center;
 }
 .hint{
+    display:flex;
     width:50%;
     justify-self:normal;
-    font-size:2vw;
+    flex-direction:column;
+    font-size:1.5vw;
 }
 .word{
     font-size:2vw;
@@ -84,6 +88,10 @@
 }
 .image{
     width:50%;
+    height:auto;
+}
+.hangman{
+    width:100px;
     height:auto;
 }
 .hint{
