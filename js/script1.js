@@ -40,7 +40,7 @@ const startGame = () =>{
     let img = document.querySelector(".hangman");
     img.style.display="inline";
     worde = guess[rndomIdx].word; //parola in chiaro da indovinare
-    hint_div.innerHTML=`<h2>PAROLE:</h2> <h2>${guessWrd.join("")}</h2> 
+    hint_div.innerHTML=`<h2>PAROLA:</h2> <h2>${guessWrd.join("")}</h2> 
                         <h2>SUGGERIMENTO: ${guess[rndomIdx].hint}</h2>`;
     rndomIdx = Math.round(Math.random() * guess.length-1);
     return 5; //prova per unit test
