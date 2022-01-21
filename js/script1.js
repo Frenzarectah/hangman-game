@@ -12,15 +12,16 @@ const guess = [ {word:"sedia",hint:"si usa per poggiare le natiche"},
 ];
 let attempts = 0;
 let worde;
+
 const createKeyb = ()=>{
-    const alpha = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+    const alpha = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N",
+    "O","P","Q","R","S","T","U","V","W","X","Y","Z"];
 let keyb = document.getElementById("keyb");
 let i=0;
 for(i=0;i<=alpha.length-1;i++){
   let btn =document.createElement('button');
   btn.classList.add("btn");
-  let classe = alpha[i].innerHTML();
-  btn.classList.add(classe+"_btn");
+  btn.classList.add((alpha[i].toLowerCase())+"_btn");
   btn.innerHTML=alpha[i];
   keyb.appendChild(btn);
 }
@@ -28,6 +29,8 @@ for(i=0;i<=alpha.length-1;i++){
 const startGame = () =>{
     let guessWrd = [];
     let button = document.querySelector(".start_btn");
+    let keyboard = document.getElementById("keyb");
+    keyboard.style.display="block";
     button.style.display="none";
     let rndomIdx = Math.round(Math.random() * guess.length-1);
     for(i=0;i<=((guess[rndomIdx].word).length)-1;i++){
@@ -72,7 +75,6 @@ const notGuessing = () =>{
     if(attempts<=3){
         attempts++;
         let img = document.querySelector(".hangman");
-        console.log(attempts);
         img.src="imgs/imgs_once/image"+attempts+".png";
         }else{  
             document.getElementsByClassName("title")[0].innerHTML=" GAME OVER!";
@@ -95,9 +97,9 @@ const addingEvent = () =>{    //funzione che aggiunge a tutti i tasti della tast
 }
 
 const addedEvent=(key)=>{  
-    console.log("pulsante premuto:"+key.value);
+    console.log("pulsante premuto:"+key.innerHTML);
     key.disabled="true";
-    search(worde.toUpperCase(),key.value); //search prende come parametro la parola da indovinare e la lettera 
+    search(worde.toUpperCase(),key.innerHTML); //search prende come parametro la parola da indovinare e la lettera 
     return true;                           //corrispondente al tasto premuto
 }
 

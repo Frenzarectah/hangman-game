@@ -51,10 +51,20 @@
 .word{
     font-size:2vw;
 }
+#intro{
+    width:10%;
+    transition:width;
+    transition-timing-function: ease-in;
+    transition-delay: 5s;
+}
+._animateIntro{
+    width:20%;
+}
 .keyboard{
     display:flex;
     align-items:center;
     flex-wrap:wrap;
+    display:none;
     width:70%;
 }
 .image{
