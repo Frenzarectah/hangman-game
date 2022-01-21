@@ -26,6 +26,9 @@
     font-size:7vw;
     justify-content: center;
 }
+.keyboard button{
+    color: black;
+}
 .start_btn{
     margin-bottom:5%;
     width:20%;
