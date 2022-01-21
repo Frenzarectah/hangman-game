@@ -28,6 +28,7 @@
 }
 .keyboard button{
     color: black;
+    border:1px black solid;
 }
 .start_btn{
     margin-bottom:5%;
