@@ -62,9 +62,6 @@
     transition-timing-function: ease-in;
     transition-delay: 5s;
 }
-._animateIntro{
-    width:20%;
-}
 .keyboard{
     display:flex;
     align-items:center;
@@ -116,5 +113,11 @@
 }
 .keyboard{
     width:98%;
+}
+}
+@media only screen and (min-width:600px) and (max-width: 850px){
+.hangman{
+    width:100px;
+    height:auto;
 }
 }
